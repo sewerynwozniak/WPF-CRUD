@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace WPF_CRUD.Data
 {
-    class CzytelnikDB :DbContext
+    public class CzytelnikDB :DbContext
     {
 
         public CzytelnikDB(DbContextOptions<CzytelnikDB> options) : base(options)

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WPF_CRUD.Data;
 
 namespace WPF_CRUD
 {
@@ -20,8 +21,13 @@ namespace WPF_CRUD
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow()
+
+        CzytelnikDB czytelnikDB;
+
+        public MainWindow(CzytelnikDB czytelnikDB)
         {
+
+            this.czytelnikDB = czytelnikDB;
             InitializeComponent();
         }
     }

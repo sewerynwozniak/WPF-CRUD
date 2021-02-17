@@ -4,7 +4,7 @@ using System.Text;
 
 namespace WPF_CRUD.Data
 {
-    class Czytelnik
+    public class Czytelnik
     {
 
         public int ID { get; set; }
