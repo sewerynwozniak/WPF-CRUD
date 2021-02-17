@@ -11,5 +11,13 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Database Management"></Label>
+
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Name="CzytelnikDB">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Header="Imie" Binding="{Binding imie}"/>
+                <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"/>
+            </DataGrid.Columns>
+        </DataGrid>
     </Grid>
 </Window>
