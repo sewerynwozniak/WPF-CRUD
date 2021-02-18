@@ -11,16 +11,18 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="*" />
             <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Database Management"></Label>
 
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Name="CzytelnikDG" IsReadOnly="True" Margin="0,0,0,10" Grid.RowSpan="2">
+        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Name="CzytelnikDBGrid" IsReadOnly="True" Margin="0,0,0,10" Grid.RowSpan="2">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Imie" Binding="{Binding imie}"/>
                 <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button  Grid.Row="3" Click="openDodajWindow">Dodaj</Button>
+        <Button  Grid.Row="2" Click="openDodajWindow">Dodaj</Button>
+        <Button  Grid.Row="3" Click="refreshDB">Odświez</Button>
     </Grid>
 </Window>

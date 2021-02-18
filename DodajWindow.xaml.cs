@@ -18,9 +18,25 @@ namespace WPF_CRUD
     /// </summary>
     public partial class DodajWindow : Window
     {
-        public DodajWindow()
+
+        CzytelnikDB czytelnikDB;
+        Czytelnik czytelnik = new Czytelnik();
+
+
+        public DodajWindow(CzytelnikDB czytelnikDB)
         {
+            this.czytelnikDB = czytelnikDB;
             InitializeComponent();
+            addNewCzytelnik.DataContext = czytelnik;
+        }
+
+
+
+        private void AddCzytelnik(object sender, RoutedEventArgs e)
+        {
+            czytelnikDB.Czytelnik.Add(czytelnik);
+            czytelnikDB.SaveChanges();
+            czytelnik = new Czytelnik();
         }
     }
 }
