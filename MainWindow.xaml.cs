@@ -37,5 +37,13 @@ namespace WPF_CRUD
             CzytelnikDG.ItemsSource = czytelnikDB.Czytelnik.ToList();
         }
 
+        private void openDodajWindow(object sender, RoutedEventArgs e)
+        {
+
+            DodajWindow dodajwindow = new DodajWindow();
+            this.Visibility = Visibility.Hidden;
+            dodajwindow.Show();
+
+        }
     }
 }
