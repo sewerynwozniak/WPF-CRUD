@@ -9,10 +9,30 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
-            <RowDefinition />
-            <RowDefinition />
+            <RowDefinition  Height="*"/>
+            <RowDefinition  Height="50"/>
         </Grid.RowDefinitions>
 
         <Label Grid.Row="0" Content="Dodaj"></Label>
+
+        <Grid Grid.Row="1">
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="*" />
+                <RowDefinition Height="*" />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Label Grid.Row="0" Grid.Column="0">imie</Label>
+            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding imie}"/>
+
+            <Label Grid.Row="1" Grid.Column="0">nazwisko</Label>
+            <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding nazwisko}"/>
+
+        </Grid>
+        <Button Grid.Row="2" Height="50">Dodaj</Button>
     </Grid>
 </Window>

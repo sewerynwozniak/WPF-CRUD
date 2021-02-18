@@ -41,7 +41,6 @@ namespace WPF_CRUD
         {
 
             DodajWindow dodajwindow = new DodajWindow();
-            this.Visibility = Visibility.Hidden;
             dodajwindow.Show();
 
         }
