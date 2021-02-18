@@ -29,6 +29,13 @@ namespace WPF_CRUD
 
             this.czytelnikDB = czytelnikDB;
             InitializeComponent();
+            GetCzytelnik();
         }
+
+        private void GetCzytelnik()
+        {
+            CzytelnikDG.ItemsSource = czytelnikDB.Czytelnik.ToList();
+        }
+
     }
 }

@@ -17,7 +17,7 @@ namespace WPF_CRUD
     public partial class App : Application
     {
 
-        private IServiceProvider serviceProvider;
+        private ServiceProvider serviceProvider;
 
         public App()
         {
