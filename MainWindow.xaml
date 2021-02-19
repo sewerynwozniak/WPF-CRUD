@@ -21,6 +21,10 @@
                 <DataGridTextColumn Header="Imie" Binding="{Binding imie}"/>
                 <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"/>
             </DataGrid.Columns>
+            <DataTemplate>
+                <Button Content="Edytuj"/>
+            </DataTemplate>
+            
         </DataGrid>
         <Button  Grid.Row="2" Click="openDodajWindow">Dodaj</Button>
         <Button  Grid.Row="3" Click="refreshDB">Odświez</Button>

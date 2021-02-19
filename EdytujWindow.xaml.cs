@@ -14,16 +14,15 @@ using WPF_CRUD.Data;
 namespace WPF_CRUD
 {
     /// <summary>
-    /// Logika interakcji dla klasy Window1.xaml
+    /// Logika interakcji dla klasy EdytujWindow.xaml
     /// </summary>
-    public partial class DodajWindow : Window
+    public partial class EdytujWindow : Window
     {
 
         CzytelnikDB czytelnikDB;
         Czytelnik czytelnik = new Czytelnik();
 
-
-        public DodajWindow(CzytelnikDB czytelnikDB)
+        public EdytujWindow()
         {
             this.czytelnikDB = czytelnikDB;
             InitializeComponent();
@@ -31,13 +30,14 @@ namespace WPF_CRUD
         }
 
 
-
-        private void AddCzytelnik(object sender, RoutedEventArgs e)
+        private void EditCzytelnik(object sender, RoutedEventArgs e)
         {
             czytelnikDB.Czytelnik.Add(czytelnik);
             czytelnikDB.SaveChanges();
             czytelnik = new Czytelnik();
             this.Visibility = Visibility.Hidden;
         }
+
+
     }
 }
