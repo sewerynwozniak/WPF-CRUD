@@ -39,17 +39,17 @@ namespace WPF_CRUD
 
         private void openDodajWindow(object sender, RoutedEventArgs e)
         {
-
             DodajWindow dodajwindow = new DodajWindow(czytelnikDB);
             dodajwindow.Show();
-
         }
+
+
+
+
 
         private void refreshDB(object sender, RoutedEventArgs e)
         {
-
             GetCzytelnik();
-
         }
 
     }

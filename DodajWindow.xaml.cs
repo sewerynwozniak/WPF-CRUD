@@ -37,6 +37,7 @@ namespace WPF_CRUD
             czytelnikDB.Czytelnik.Add(czytelnik);
             czytelnikDB.SaveChanges();
             czytelnik = new Czytelnik();
+            this.Visibility = Visibility.Hidden;
         }
     }
 }

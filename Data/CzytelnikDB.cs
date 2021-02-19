@@ -27,7 +27,7 @@ namespace WPF_CRUD.Data
             return new Czytelnik[]
             {
                 new Czytelnik { ID =1, imie ="Adam", nazwisko ="Mazur"},
-                new Czytelnik { ID =2, imie ="Marcin", nazwisko ="Nowak"},
+                
             };
         }
     }
