@@ -33,6 +33,6 @@
             <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding nazwisko}"/>
 
         </Grid>
-        <Button Grid.Row="2" Height="50" Click="editCzytelnikClick">Edytuj</Button>
+        <Button Grid.Row="2" Height="50" Click="editCzytelnikClick">Dodaj</Button>
     </Grid>
 </Window>

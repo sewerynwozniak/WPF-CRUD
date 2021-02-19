@@ -9,7 +9,6 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
-using WPF_CRUD.Data;
 
 namespace WPF_CRUD
 {
@@ -18,26 +17,14 @@ namespace WPF_CRUD
     /// </summary>
     public partial class EdytujWindow : Window
     {
-
-        CzytelnikDB czytelnikDB;
-        Czytelnik czytelnik = new Czytelnik();
-
         public EdytujWindow()
         {
-            this.czytelnikDB = czytelnikDB;
             InitializeComponent();
-            addNewCzytelnik.DataContext = czytelnik;
         }
 
-
-        private void EditCzytelnik(object sender, RoutedEventArgs e)
+        private void editCzytelnikClick(object sender, RoutedEventArgs e)
         {
-            czytelnikDB.Czytelnik.Add(czytelnik);
-            czytelnikDB.SaveChanges();
-            czytelnik = new Czytelnik();
-            this.Visibility = Visibility.Hidden;
+
         }
-
-
     }
 }
