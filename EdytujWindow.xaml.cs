@@ -9,6 +9,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using WPF_CRUD.Data;
 
 namespace WPF_CRUD
 {
@@ -17,10 +18,18 @@ namespace WPF_CRUD
     /// </summary>
     public partial class EdytujWindow : Window
     {
-        public EdytujWindow()
+
+        CzytelnikDB czytelnikDB;
+        Czytelnik czytelnik = new Czytelnik();
+
+        public EdytujWindow(CzytelnikDB czytelnikDB, Czytelnik selectedCzytelnik)
         {
+            edytujCzytelnikGrid.DataContext = selectedCzytelnik;
             InitializeComponent();
+            
         }
+
+
 
         private void editCzytelnikClick(object sender, RoutedEventArgs e)
         {

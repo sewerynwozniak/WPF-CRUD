@@ -24,7 +24,7 @@
                 <DataGridTemplateColumn Header="Edytuj">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edytuj"/>
+                            <Button Content="Edytuj" Click="openEdytujWindow"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>

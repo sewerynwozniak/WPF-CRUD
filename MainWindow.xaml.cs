@@ -43,7 +43,13 @@ namespace WPF_CRUD
             dodajwindow.Show();
         }
 
-
+        Czytelnik selectedCzytelnik = new Czytelnik();
+        private void openEdytujWindow(object sender, RoutedEventArgs e)
+        {
+            selectedCzytelnik = (sender as FrameworkElement).DataContext as Czytelnik;
+            EdytujWindow edytujWindow = new EdytujWindow(czytelnikDB, selectedCzytelnik);
+            edytujWindow.Show();
+        }
 
 
 

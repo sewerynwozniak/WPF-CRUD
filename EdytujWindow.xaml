@@ -15,7 +15,7 @@
 
         <Label Grid.Row="0" Content="Edytuj"></Label>
 
-        <Grid Grid.Row="1" Name="editCzytelnik">
+        <Grid Grid.Row="1" Name="edytujCzytelnikGrid">
 
             <Grid.RowDefinitions>
                 <RowDefinition Height="*" />
@@ -33,6 +33,6 @@
             <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding nazwisko}"/>
 
         </Grid>
-        <Button Grid.Row="2" Height="50" Click="editCzytelnikClick">Dodaj</Button>
+        <Button Grid.Row="2" Height="50" Click="editCzytelnikClick">Edytuj</Button>
     </Grid>
 </Window>
