@@ -51,6 +51,15 @@ namespace WPF_CRUD
             edytujWindow.Show();
         }
 
+        Czytelnik selectedCzytelnikToDelete = new Czytelnik();
+        private void usunRow(object sender, RoutedEventArgs e)
+        {
+            selectedCzytelnikToDelete = (sender as FrameworkElement).DataContext as Czytelnik;
+            czytelnikDB.Czytelnik.Remove(selectedCzytelnikToDelete);
+            czytelnikDB.SaveChanges();
+            GetCzytelnik();
+        }
+
 
 
         private void refreshDB(object sender, RoutedEventArgs e)
