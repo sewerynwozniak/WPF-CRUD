@@ -9,13 +9,31 @@
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="50"/>
             <RowDefinition Height="*" />
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <Label Grid.Row="0" Content="Database Management"></Label>
 
-        <DataGrid Grid.Row="1" AutoGenerateColumns="False" Name="CzytelnikDBGrid" IsReadOnly="True">
+        <Grid Grid.Row="1">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+
+            <Button  Grid.Column="0" Click="openDodajWindow">Książka</Button>
+            <Button  Grid.Column="1" Click="openDodajWindow">Gatunek</Button>
+            <Button  Grid.Column="2" Click="openDodajWindow">Zamówienie</Button>
+  
+        </Grid>
+
+        <Label Grid.Row="2" Content="Czytelnik"></Label>
+        
+        <DataGrid Grid.Row="3" AutoGenerateColumns="False" Name="CzytelnikDBGrid" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Imie" Binding="{Binding imie}"/>
@@ -40,7 +58,7 @@
             </DataGrid.Columns>
         </DataGrid>
         
-        <Button  Grid.Row="2" Click="openDodajWindow">Dodaj</Button>
-        <Button  Grid.Row="3" Click="refreshDB">Odświez</Button>
+        <Button  Grid.Row="4" Click="openDodajWindow">Dodaj</Button>
+        <Button  Grid.Row="5" Click="refreshDB">Odświez</Button>
     </Grid>
 </Window>
