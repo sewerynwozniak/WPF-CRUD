@@ -21,19 +21,22 @@ namespace WPF_CRUD
 
         CzytelnikDB czytelnikDB;
         Czytelnik czytelnik = new Czytelnik();
+        Czytelnik selectedCzytelnik = new Czytelnik();
 
         public EdytujWindow(CzytelnikDB czytelnikDB, Czytelnik selectedCzytelnik)
         {
-            
+            this.selectedCzytelnik = selectedCzytelnik;
+            this.czytelnikDB = czytelnikDB;
             InitializeComponent();
             edytujCzytelnikGrid.DataContext = selectedCzytelnik;
         }
 
 
 
-        private void editCzytelnikClick(object sender, RoutedEventArgs e)
+        private void edytujCzytelnikClick(object sender, RoutedEventArgs e)
         {
-
+            czytelnikDB.Update(selectedCzytelnik);
+            czytelnikDB.SaveChanges();
         }
     }
 }
