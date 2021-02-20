@@ -24,9 +24,9 @@ namespace WPF_CRUD
 
         public EdytujWindow(CzytelnikDB czytelnikDB, Czytelnik selectedCzytelnik)
         {
-            edytujCzytelnikGrid.DataContext = selectedCzytelnik;
-            InitializeComponent();
             
+            InitializeComponent();
+            edytujCzytelnikGrid.DataContext = selectedCzytelnik;
         }
 
 
