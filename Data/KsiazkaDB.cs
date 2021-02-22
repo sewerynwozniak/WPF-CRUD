@@ -5,7 +5,7 @@ using System.Text;
 
 namespace WPF_CRUD.Data
 {
-    class KsiazkaDB : DbContext
+    public class KsiazkaDB : DbContext
     {
 
         public KsiazkaDB(DbContextOptions<KsiazkaDB> options) : base(options)

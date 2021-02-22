@@ -23,11 +23,13 @@
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button  Grid.Column="0" Click="openDodajWindow">Książka</Button>
-            <Button  Grid.Column="1" Click="openDodajWindow">Gatunek</Button>
-            <Button  Grid.Column="2" Click="openDodajWindow">Zamówienie</Button>
+            <Button  Grid.Column="0">Czytelnik</Button>
+            <Button  Grid.Column="1">Książka</Button>
+            <Button  Grid.Column="2">Gatunek</Button>
+            <Button  Grid.Column="3">Zamówienie</Button>
   
         </Grid>
 
@@ -38,6 +40,11 @@
                 <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
                 <DataGridTextColumn Header="Imie" Binding="{Binding imie}"/>
                 <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"/>
+                <DataGridTextColumn Header="Miasto" Binding="{Binding miasto}"/>
+                <DataGridTextColumn Header="Ulica" Binding="{Binding ulica}"/>
+                <DataGridTextColumn Header="Nr Budynku" Binding="{Binding nr_budynku}"/>
+                <DataGridTextColumn Header="Nr Telefonu" Binding="{Binding nr_tel}"/>
+              
 
                 <DataGridTemplateColumn Header="Edytuj">
                     <DataGridTemplateColumn.CellTemplate>
@@ -57,7 +64,8 @@
 
             </DataGrid.Columns>
         </DataGrid>
-        
+
+
         <Button  Grid.Row="4" Click="openDodajWindow">Dodaj</Button>
         <Button  Grid.Row="5" Click="refreshDB">Odświez</Button>
     </Grid>

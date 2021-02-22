@@ -18,19 +18,25 @@ namespace WPF_CRUD
     {
 
         private ServiceProvider serviceProvider;
+     
 
         public App()
         {
             ServiceCollection service = new ServiceCollection();
+           
+
             service.AddDbContext<CzytelnikDB>(option =>
             {
                 option.UseSqlite("Data Source = Biblioteka.db");
             }
             );
 
+
             service.AddSingleton<MainWindow>();
+          
 
             serviceProvider = service.BuildServiceProvider();
+      
         }
 
 
@@ -38,6 +44,8 @@ namespace WPF_CRUD
         {
             var mainWindow = serviceProvider.GetService<MainWindow>();
             mainWindow.Show();
+
+
         }
 
     }

@@ -23,19 +23,23 @@ namespace WPF_CRUD
     {
 
         CzytelnikDB czytelnikDB;
+     
 
         public MainWindow(CzytelnikDB czytelnikDB)
         {
 
             this.czytelnikDB = czytelnikDB;
+           
             InitializeComponent();
             GetCzytelnik();
+            
         }
 
         private void GetCzytelnik()
         {
             CzytelnikDBGrid.ItemsSource = czytelnikDB.Czytelnik.ToList();
         }
+
 
         private void openDodajWindow(object sender, RoutedEventArgs e)
         {

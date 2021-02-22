@@ -20,15 +20,18 @@ namespace WPF_CRUD.Data
             modelBuilder.Entity<Czytelnik>().HasData(GetCzytelnik());
             base.OnModelCreating(modelBuilder);
 
+
         }
 
         private Czytelnik[] GetCzytelnik()
         {
             return new Czytelnik[]
             {
-                new Czytelnik { ID =1, imie ="Adam", nazwisko ="Mazur"},
+                new Czytelnik { ID =1, imie ="Adam", nazwisko ="Mazur", miasto="Kraków", ulica="mogilska", nr_budynku="10", nr_tel="600500150"},
                 
             };
         }
+
+
     }
 }
