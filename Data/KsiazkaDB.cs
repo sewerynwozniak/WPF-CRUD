@@ -26,7 +26,7 @@ namespace WPF_CRUD.Data
         {
             return new Ksiazka[]
             {
-                new Ksiazka { ID =1, gatunek ="sci-fi", tytul ="Solaris"},
+                new Ksiazka { ID =1, gatunek ="fantastyczno-naukowa", tytul ="Solaris", autor="Stanisław Lem", rok_wydania="1961", kod_ISBN="9780151628342" },
 
             };
         }
