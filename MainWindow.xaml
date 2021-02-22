@@ -15,7 +15,7 @@
             <RowDefinition Height="50"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
-        <Label Grid.Row="0" Content="Database Management"></Label>
+        <Label Grid.Row="0" FontSize="20" FontWeight="Bold" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Database Management"></Label>
 
         <Grid Grid.Row="1">
 
@@ -26,38 +26,38 @@
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Button  Grid.Column="0">Czytelnik</Button>
-            <Button  Grid.Column="1">Książka</Button>
-            <Button  Grid.Column="2">Gatunek</Button>
-            <Button  Grid.Column="3">Zamówienie</Button>
+            <Button  Grid.Column="0" Background="MintCream" BorderThickness="3">Czytelnik</Button>
+            <Button  Grid.Column="1" Background="Wheat">Książka</Button>
+            <Button  Grid.Column="2" Background="LightGoldenrodYellow">Gatunek</Button>
+            <Button  Grid.Column="3" Background="LightSalmon" >Zamówienie</Button>
   
         </Grid>
 
-        <Label Grid.Row="2" Content="Czytelnik"></Label>
+        <Label Grid.Row="2" FontSize="20" FontWeight="Medium" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Czytelnik"></Label>
         
-        <DataGrid Grid.Row="3" AutoGenerateColumns="False" Name="CzytelnikDBGrid" IsReadOnly="True">
-            <DataGrid.Columns>
-                <DataGridTextColumn Header="ID" Binding="{Binding ID}"/>
-                <DataGridTextColumn Header="Imie" Binding="{Binding imie}"/>
-                <DataGridTextColumn Header="Nazwisko" Binding="{Binding nazwisko}"/>
-                <DataGridTextColumn Header="Miasto" Binding="{Binding miasto}"/>
-                <DataGridTextColumn Header="Ulica" Binding="{Binding ulica}"/>
-                <DataGridTextColumn Header="Nr Budynku" Binding="{Binding nr_budynku}"/>
-                <DataGridTextColumn Header="Nr Telefonu" Binding="{Binding nr_tel}"/>
-              
+        <DataGrid Grid.Row="3" Background="AliceBlue"  AutoGenerateColumns="False" Name="CzytelnikDBGrid" IsReadOnly="True">
+            <DataGrid.Columns >
+                <DataGridTextColumn Width="50" Header="ID" Binding="{Binding ID}"/>
+                <DataGridTextColumn Width="*" Header="Imie" Binding="{Binding imie}"/>
+                <DataGridTextColumn Width="*" Header="Nazwisko" Binding="{Binding nazwisko}"/>
+                <DataGridTextColumn Width="*" Header="Miasto" Binding="{Binding miasto}"/>
+                <DataGridTextColumn Width="*" Header="Ulica" Binding="{Binding ulica}"/>
+                <DataGridTextColumn Width="*" Header="Nr Budynku" Binding="{Binding nr_budynku}"/>
+                <DataGridTextColumn Width="*" Header="Nr Telefonu" Binding="{Binding nr_tel}"/>
 
-                <DataGridTemplateColumn Header="Edytuj">
+
+                <DataGridTemplateColumn Width="50" Header="Edytuj">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Edytuj" Click="openEdytujWindow"/>
+                            <Button BorderBrush="LightBlue" Background="LightBlue" Content="Edytuj" Click="openEdytujWindow"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn Header="Usuń">
+                <DataGridTemplateColumn Width="50" Header="Usuń">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
-                            <Button Content="Usuń" Click="usunRow"/>
+                            <Button BorderBrush="Red" Background="Red" Content="Usuń" Click="usunRow"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
@@ -66,7 +66,7 @@
         </DataGrid>
 
 
-        <Button  Grid.Row="4" Click="openDodajWindow">Dodaj</Button>
-        <Button  Grid.Row="5" Click="refreshDB">Odświez</Button>
+        <Button  Grid.Row="4" Margin="5" Width="100" Background="GhostWhite" Click="openDodajWindow">Dodaj</Button>
+        <Button  Grid.Row="5" Margin="5" Width="100" Background="GhostWhite" Click="refreshDB">Odśwież</Button>
     </Grid>
 </Window>
