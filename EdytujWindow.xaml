@@ -5,34 +5,54 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPF_CRUD"
         mc:Ignorable="d"
-        Title="EdytujWindow" Height="450" Width="800">
+        Title="EdytujWindow" Height="200" Width="800">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="50"/>
-            <RowDefinition  Height="*"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition  Height="50"/>
             <RowDefinition  Height="50"/>
         </Grid.RowDefinitions>
 
-        <Label Grid.Row="0" Content="Edytuj"></Label>
+        <Label Grid.Row="0" FontSize="20"  FontWeight="Medium" HorizontalAlignment="Center" Content="Edytuj wiersz"></Label>
 
         <Grid Grid.Row="1" Name="edytujCzytelnikGrid">
 
             <Grid.RowDefinitions>
-                <RowDefinition Height="*" />
-                <RowDefinition Height="*" />
+                <RowDefinition Height="25" />
+                <RowDefinition Height="25" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
             </Grid.ColumnDefinitions>
 
-            <Label Grid.Row="0" Grid.Column="0">imie</Label>
-            <TextBox Grid.Row="0" Grid.Column="1" Text="{Binding imie}"/>
 
-            <Label Grid.Row="1" Grid.Column="0">nazwisko</Label>
+
+            <Label Grid.Row="0" Background="MintCream" Grid.Column="0">imie</Label>
+            <TextBox Grid.Row="1" Grid.Column="0" Text="{Binding imie}"/>
+
+            <Label Grid.Row="0" Background="MintCream" Grid.Column="1">nazwisko</Label>
             <TextBox Grid.Row="1" Grid.Column="1" Text="{Binding nazwisko}"/>
 
+            <Label Grid.Row="0" Background="MintCream" Grid.Column="2">miasto</Label>
+            <TextBox Grid.Row="1" Grid.Column="2" Text="{Binding miasto}"/>
+
+            <Label Grid.Row="0" Background="MintCream" Grid.Column="3">ulica</Label>
+            <TextBox Grid.Row="1" Grid.Column="3" Text="{Binding ulica}"/>
+
+            <Label Grid.Row="0" Background="MintCream" Grid.Column="4">numer budynku</Label>
+            <TextBox Grid.Row="1" Grid.Column="4" Text="{Binding nr_budynku}"/>
+
+            <Label Grid.Row="0" Background="MintCream" Grid.Column="5">numer telefonu</Label>
+            <TextBox Grid.Row="1" Grid.Column="5" Text="{Binding nr_tel}"/>
+
+
+
         </Grid>
-        <Button Grid.Row="2" Height="50" Click="edytujCzytelnikClick">Edytuj</Button>
+        <Button Grid.Row="2" Margin="5" Width="100" Background="GhostWhite" Click="edytujCzytelnikClick">Edytuj</Button>
     </Grid>
 </Window>
